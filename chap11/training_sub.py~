@@ -1,0 +1,18 @@
+import redis
+import time
+conn = redis.Redis()
+
+print('choco starting')
+while True:
+    msg = conn.blpop('chocos')
+    if not msg:
+        break
+    val = msg[1].decode('utf-8')
+    if val == 'quit':
+        break
+    time.sleep(0.5)
+    print('enveloped', val)
+#    print(conn.get('chocos'))
+    
+
+print('enveloped all chocos')

@@ -1,0 +1,6 @@
+import socket
+
+sample_host = 'www.crappytaxidermy.com'
+print(socket.gethostbyname(sample_host))
+
+print(socket.gethostbyname_ex(sample_host))

@@ -1,0 +1,6 @@
+def iso():
+    from datetime import date
+    print(date.today().isoformat())
+
+def hello():
+    print("hello world")
